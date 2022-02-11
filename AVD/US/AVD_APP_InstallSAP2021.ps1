@@ -7,7 +7,7 @@
  New-Item -Path $drive -Name $appName  -ItemType Directory -ErrorAction SilentlyContinue
  $LocalPath = $drive + '\' + $appName 
  set-Location $LocalPath
- $ClientURL = 'https://staibsources001.blob.core.windows.net/applications/Live/SAP%202021/Install.zip'
+ $ClientURL = 'https://staibsources002.blob.core.windows.net/applications/Live/SAP%202021/Install.zip'
  $Clientexe = 'Install.zip'
  $outputPath = $LocalPath + '\' + $Clientexe
  Invoke-WebRequest -Uri $ClientURL -OutFile $outputPath -UseBasicParsing
