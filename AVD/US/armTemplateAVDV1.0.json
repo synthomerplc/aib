@@ -60,26 +60,26 @@
                         "name": "InstallVisualStudioforOffice",
                         "runElevated": true,
                         "runAsSystem": true,
-                        "scriptUri": "https://raw.githubusercontent.com/synthomerplc/aib/main/AVD/AVD_APP_InstallVisualStudioforOffice.ps1"
+                        "scriptUri": "https://raw.githubusercontent.com/synthomerplc/aib/main/AVD/US/AVD_APP_InstallVisualStudioforOffice.ps1"
                     },
                     {
                         "type": "PowerShell",
                         "name": "InstallIBMNotes",
                         "runElevated": true,
                         "runAsSystem": true,
-                        "scriptUri": "https://raw.githubusercontent.com/synthomerplc/aib/main/AVD/AVD_APP_InstallIBMNotesClient.ps1"
+                        "scriptUri": "https://raw.githubusercontent.com/synthomerplc/aib/main/AVD/US/AVD_APP_InstallIBMNotesClient.ps1"
                     },
                     {
                         "type": "PowerShell",
                         "name": "InstallSAP",
                         "runElevated": true,
                         "runAsSystem": true,
-                        "scriptUri": "https://raw.githubusercontent.com/synthomerplc/aib/main/AVD/AVD_APP_InstallSAP2021.ps1"
+                        "scriptUri": "https://raw.githubusercontent.com/synthomerplc/aib/main/AVD/US/AVD_APP_InstallSAP2021.ps1"
                     },
                     {
                         "type": "File",
                         "name": "CopyStartMenuXML",
-                        "sourceUri": "https://raw.githubusercontent.com/synthomerplc/aib/main/AVD/AVD_FILE_startlayout.xml",
+                        "sourceUri": "https://raw.githubusercontent.com/synthomerplc/aib/main/AVD/US/AVD_FILE_startlayout.xml",
                         "destination": "c:\\windows\\temp\\startlayout.xml"
                     },
                     {
@@ -87,14 +87,14 @@
                         "name": "SetStartMenuLayout",
                         "runElevated": true,
                         "runAsSystem": true,
-                        "scriptUri": "https://raw.githubusercontent.com/synthomerplc/aib/main/AVD/AVD_CONF_StartMenuLayout.ps1"
+                        "scriptUri": "https://raw.githubusercontent.com/synthomerplc/aib/main/AVD/US/AVD_CONF_StartMenuLayout.ps1"
                     },
                     {
                         "type": "PowerShell",
                         "name": "RemoveAppxPackages",
                         "runElevated": true,
                         "runAsSystem": true,
-                        "scriptUri": "https://raw.githubusercontent.com/synthomerplc/aib/main/AVD/AVD_CONF_RemoveAppxPackages.ps1"
+                        "scriptUri": "https://raw.githubusercontent.com/synthomerplc/aib/main/AVD/US/AVD_CONF_RemoveAppxPackages.ps1"
                     },
                     {
                         "type": "WindowsRestart",
@@ -106,7 +106,7 @@
                         "name": "FixSysPrep",
                         "runElevated": true,
                         "runAsSystem": true,
-                        "scriptUri": "https://raw.githubusercontent.com/synthomerplc/aib/main/AVD/AVD_CONF_SysprepFix.ps1"
+                        "scriptUri": "https://raw.githubusercontent.com/synthomerplc/aib/main/AVD/US/AVD_CONF_SysprepFix.ps1"
                     },   
                     {
                         "type": "WindowsUpdate",
