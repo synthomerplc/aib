@@ -7,7 +7,7 @@
  New-Item -Path $drive -Name $appName  -ItemType Directory -ErrorAction SilentlyContinue
  $LocalPath = $drive + '\' + $appName 
  set-Location $LocalPath
- $IBMNotesClientURL = 'https://staibsources001.blob.core.windows.net/applications/Live/IBM%20Notes/Notes%209.0.1%20client.zip'
+ $IBMNotesClientURL = 'https://staibsources002.blob.core.windows.net/applications/Live/IBM%20Notes/Notes%209.0.1%20client.zip'
  $IBMNotesClientexe = 'IBMClientInstall.zip'
  $outputPath = $LocalPath + '\' + $IBMNotesClientexe
  Invoke-WebRequest -Uri $IBMNotesClientURL -OutFile $outputPath -UseBasicParsing
