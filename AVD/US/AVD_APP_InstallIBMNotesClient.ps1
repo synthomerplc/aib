@@ -26,7 +26,7 @@
  New-Item -Path $drive -Name $appName  -ItemType Directory -ErrorAction SilentlyContinue
  $LocalPath = $drive + '\' + $appName 
  set-Location $LocalPath
- $IBMNotesURL = 'https://staibsources001.blob.core.windows.net/applications/Live/IBM%20Notes/notes901FP7_win.exe'
+ $IBMNotesURL = 'https://staibsources002.blob.core.windows.net/applications/Live/IBM%20Notes/notes901FP7_win.exe'
  $IBMNotesexe = 'notes901FP7_win.exe'
  $outputPath = $LocalPath + '\' + $IBMNotesexe
  Invoke-WebRequest -Uri $IBMNotesURL -OutFile $outputPath -UseBasicParsing
