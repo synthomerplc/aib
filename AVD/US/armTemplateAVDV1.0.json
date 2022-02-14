@@ -134,7 +134,7 @@
                         "DR": "Essential",
                         "Owner": "Alex.Durrant@hybrit.co.uk"
                     },
-                    "excludeFromLatest": "true",
+                    "excludeFromLatest": true,
                     "replicationRegions": [
                       "<regions>"
 
