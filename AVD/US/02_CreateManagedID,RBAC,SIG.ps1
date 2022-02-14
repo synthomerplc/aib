@@ -1,3 +1,5 @@
+### NOTE: If resubmitting an AIB template to the existing resource group then the managed identity, gallery and gallery definition steps do not need to be reran.
+
 # Log In
 Connect-AzAccount
 
@@ -34,7 +36,7 @@ $imageTemplateName="AVDWin10MultiImage"
 $runOutputName="sigOutput"
 
 # Define Tags
-$tags = @{"ApplicationName"="AVD"; "BusinessUnit"="Shared" ; "Env"="Prod" ; "DR"="Essential" ; "Owner"="Alex.Durrant@hybrit.co.uk"}
+$tags = @{"ApplicationName"="AVD"; "BusinessUnit"="Shared" ; "Env"="Prod" ; "DR"="Essential" ; "Owner"="someone@synthomer.com"}
 
 # create resource group
 New-AzResourceGroup -Name $imageResourceGroup -Location $location -Tag $tags
