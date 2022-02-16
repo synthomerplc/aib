@@ -61,7 +61,7 @@ Add-Content -LiteralPath C:\New-WVDSessionHost.log "Downloading WVD Agent"
 Add-Content -LiteralPath C:\New-WVDSessionHost.log "Installing WVD Bootloader"
 $bootloader_deploy_status = Start-Process `
     -FilePath "msiexec.exe" `
-    -ArgumentList "/i $WVDBootInstaller", `
+    -ArgumentList "/i $LocalWVDpath$\WVDBootInstaller", `
         "/quiet", `
         "/qn", `
         "/norestart", `
@@ -77,7 +77,7 @@ Add-Content -LiteralPath C:\New-WVDSessionHost.log "Installing WVD Agent"
 Write-Output "Installing RD Infra Agent on VM $AgentInstaller`n"
 $agent_deploy_status = Start-Process `
     -FilePath "msiexec.exe" `
-    -ArgumentList "/i $WVDAgentInstaller", `
+    -ArgumentList "/i $LocalWVDpath$\WVDAgentInstaller", `
         "/quiet", `
         "/qn", `
         "/norestart", `
