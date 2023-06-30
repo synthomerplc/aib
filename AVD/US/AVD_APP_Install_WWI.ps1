@@ -4,7 +4,7 @@ $drive = 'C:\AIBTemp'
 $LocalPath = Join-Path $drive $appName
 $LogDrive = 'C:\AIBAppLogs'
 $LogPath = Join-Path $LogDrive "${appName}_install.log"
-#$unzippedInstaller = 'N/A' # THIS MAY NOT BE REQUIRED, ONLY SPECIFY IF SETUP FILE HAS BEEN UNZIPPED, REPOINT TO SETUP FILE IF APPLICABLE
+$unzippedInstaller = 'EHSWWI32SP53P53HF_1-20010357.EXE' # THIS MAY NOT BE REQUIRED, ONLY SPECIFY IF SETUP FILE HAS BEEN UNZIPPED, REPOINT TO SETUP FILE IF APPLICABLE
 
 # Create logging function
 function LogWrite
@@ -92,7 +92,8 @@ Install-Application -url 'https://someurl.com' -fileName 'setup.msi' -extraMsiAr
 
 #  Client installation
 LogWrite "AIB Customisation: Installing $appName"
-Install-Application -url 'https://staibsources002.blob.core.windows.net/applications/Live/WindowsWordProcessorIntegration/EHSWWI32SP53P53HF_1-20010357.EXE' -fileName 'EHSWWI32SP53P53HF_1-20010357.EXE' -arguments @('/S')
+Install-Application -url 'https://staibsources002.blob.core.windows.net/applications/Live/WindowsWordProcessorIntegration/setup.zip' -fileName 'Setup.zip' -arguments @('/S', "/f1`"$LocalPath\setup.iss`"")
+
 
 # Cleanup temp directory
 Set-location "c:\"
