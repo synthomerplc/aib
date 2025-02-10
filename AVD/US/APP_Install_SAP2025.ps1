@@ -4,7 +4,7 @@ $drive = 'C:\AIBTemp'
 $LocalPath = Join-Path $drive $appName
 $LogDrive = 'C:\AIBAppLogs'
 $LogPath = Join-Path $LogDrive "${appName}_install.log"
-#$unzippedInstaller = 'Setup\NwSapSetup.exe' # THIS MAY NOT BE REQUIRED, ONLY SPECIFY IF SETUP FILE HAS BEEN UNZIPPED, REPOINT TO SETUP FILE IF APPLICABLE
+$unzippedInstaller = 'Sap3FF1.tmp\Setup\NwSapSetup.exe' # THIS MAY NOT BE REQUIRED, ONLY SPECIFY IF SETUP FILE HAS BEEN UNZIPPED, REPOINT TO SETUP FILE IF APPLICABLE
 
 # Create logging function
 function LogWrite
@@ -92,7 +92,7 @@ Install-Application -url 'https://someurl.com' -fileName 'setup.msi' -extraMsiAr
 
 #  Client installation
 LogWrite "AIB Customisation: Installing $appName"
-Install-Application -url 'https://staibsources002.blob.core.windows.net/applications/Live/SAP%202025/SAPGUI800_AFO23_64b.exe' -fileName 'SAPGUI800_AFO23_64b.exe' -arguments @('/nodlg')
+Install-Application -url 'https://staibsources002.blob.core.windows.net/applications/Live/SAP%202025/Install.zip' -fileName 'Install.zip' -arguments @('/Silent', '/Package="SAPGUI800&AFO23_64bit"')
 Start-Sleep 2
 
 # Cleanup temp directory
