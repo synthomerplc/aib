@@ -27,7 +27,7 @@
 #>
 Begin {
     # White list of Features On Demand V2 packages
-    $WhiteListOnDemand = "NetFX3|MSPaint|Tools.Graphics.DirectX|Tools.DeveloperMode.Core|Language|Windows.Client.ShellComponents|ContactSupport|OneCoreUAP|Media.WindowsMediaPlayer|Microsoft.Windows.WordPad|Print.Management.Console|Browser.InternetExplorer|Print.Fax.Scan|App.Support.QuickAssist|App.StepsRecorder|Microsoft.Windows.Notepad|Hello.Face"
+    $WhiteListOnDemand = "NetFX3|MSPaint|Tools.Graphics.DirectX|Tools.DeveloperMode.Core|Language|Windows.Client.ShellComponents|ContactSupport|OneCoreUAP|Media.WindowsMediaPlayer|Microsoft.Windows.WordPad|Print.Management.Console|Browser.InternetExplorer|Print.Fax.Scan|App.Support.QuickAssist|App.StepsRecorder|Microsoft.Windows.Notepad|Hello.Face|Microsoft.Windows.Wifi.Client|Microsoft.Windows.Ethernet.Client|Microsoft.Windows.PowerShell.ISE"
 
     # White list of appx packages to keep installed
     $WhiteListedApps = New-Object -TypeName System.Collections.ArrayList
@@ -35,9 +35,10 @@ Begin {
         "Microsoft.DesktopAppInstaller",
         "Microsoft.Windows.Photos",
         "Microsoft.MicrosoftStickyNotes",
-        "Microsoft.WindowsAlarms",
         "Microsoft.WindowsCalculator",
-        "Microsoft.StorePurchaseApp"        
+		"Microsoft.OneDriveSync",
+        "Microsoft.StorePurchaseApp",
+		"Microsoft.SecHealthUI"
     ))
 
     # Windows 10 version 1809
@@ -46,15 +47,29 @@ Begin {
         "Microsoft.HEIFImageExtension",
         "Microsoft.VP9VideoExtensions",
         "Microsoft.WebMediaExtensions",
-        "Microsoft.WebpImageExtension"
+        "Microsoft.WebpImageExtension",
+		"MicrosoftWindows.Client.WebExperience",
+		"MicrosoftWindows.CrossDevice",
+		"Microsoft.RawImageExtension",
+		"Microsoft.ScreenSketch",
+		"Microsoft.VCLibs.140.00"
+		
     ))
 
     # Synthomer Specific
     $WhiteListedApps.AddRange(@(
         "Microsoft.MicrosoftEdge.Stable",
-        "Microsoft.People",
+        "Microsoft.Paint",
         "Microsoft.WindowsCamera",
-        "Microsoft.WindowsSoundRecorder"
+        "Microsoft.WindowsSoundRecorder",
+        "Microsoft.WindowsNotepad",
+        "Microsoft.WindowsTerminal",
+        "Microsoft.Todos",
+        "Microsoft.WindowsStore",
+		"MicrosoftCorporationII.PowerAppsforWindows10",
+		"MSTeams",
+		"Microsoft.Winget.Source",
+		"Microsoft.PowerAutomateDesktop"
     ))
 
     
